@@ -4,30 +4,53 @@ NAO mude o nome deste arquivo nem a assinatura das funcoes.
 Escreva sua solucao no lugar do 'pass'.
 """
 
-
 def soma_lista(lista):
+<<<<<<< HEAD
+=======
+    """Devolve a soma de todos os numeros da lista. Lista vazia devolve 0."""
+def soma_lista(lista):
+>>>>>>> 28d4ef878381b2512507ec096cc891dfa1eaaeb0
     soma = 0
     for numero in lista:
         soma += numero
     return soma
 
 def conta_pares(lista):
+<<<<<<< HEAD
+=======
+    """Devolve quantos numeros da lista sao pares."""
+def conta_pares(lista):
+>>>>>>> 28d4ef878381b2512507ec096cc891dfa1eaaeb0
     quantidade = 0
     for n in lista:
         if n % 2 == 0:
             quantidade += 1
     return quantidade
+<<<<<<< HEAD
 
 
 def maior_valor(lista):
+=======
+
+def maior_valor(lista):
+    """Devolve o maior numero da lista. A lista nao esta vazia."""
+def maior_valor(lista):
+>>>>>>> 28d4ef878381b2512507ec096cc891dfa1eaaeb0
     maior = lista[0]
     for n in lista:
         if maior < n:
             maior = n
     return maior
+<<<<<<< HEAD
 
 
 def existe(lista, alvo):
+=======
+
+def existe(lista, alvo):
+    """Devolve True se o alvo esta na lista, False se nao esta."""
+def existe(lista, alvo):
+>>>>>>> 28d4ef878381b2512507ec096cc891dfa1eaaeb0
     for n in lista:
         if n == alvo:
             return True
@@ -58,4 +81,8 @@ def segundo_maior(lista):
 
                 if n > segundo and n < maior:
                     segundo = n
+<<<<<<< HEAD
     return segundo
+=======
+    return segundo
+>>>>>>> 28d4ef878381b2512507ec096cc891dfa1eaaeb0
