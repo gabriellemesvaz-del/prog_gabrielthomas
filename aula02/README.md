@@ -8,3 +8,7 @@ testes visíveis — para receber, rode:
 ```bash
 git pull upstream main
 ```
+
+
+
+
