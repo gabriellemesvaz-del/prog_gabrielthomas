@@ -23,12 +23,6 @@ Não mude o nome do arquivo nem a assinatura das funções.
 Devolve uma **lista nova** contendo só os números que não são negativos. O zero fica.
 
 ```
-<<<<<<< HEAD
-
-
-
-
-=======
 remove_negativos([1, -2, 3, -4])  ->  [1, 3]
 remove_negativos([0, -1, 5])      ->  [0, 5]
 ```
@@ -82,4 +76,3 @@ remove_repetidos([5, 5, 5])        ->  [5]
 
 Dica: a função `existe` que você escreveu na Aula 01 resolve metade do problema. Você pode
 reescrevê-la aqui, ou usar o operador `in` do Python.
->>>>>>> 28d4ef878381b2512507ec096cc891dfa1eaaeb0
