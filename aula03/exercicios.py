@@ -17,14 +17,13 @@ def soma_contando(lista):
     Conte 1 operacao para cada numero que voce somar.
     soma_contando([1, 2, 3]) -> (6, 3)"""
     soma = 0
-    operacoes = 0
+    operacoes = 1  
 
     for num in lista:
         soma += num
         operacoes += 1
 
     return soma, operacoes
-
 
 
 def busca_linear_contando(lista, alvo):
