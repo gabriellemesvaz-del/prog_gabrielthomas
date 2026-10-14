@@ -19,7 +19,7 @@ def conta_negativos(lista):
 
 def media(lista):
     """Media dos numeros. Lista vazia devolve 0."""
-   def media(lista):
+def media(lista):
   if not lista:
     return 0
   return sum(lista) / len(lista)
