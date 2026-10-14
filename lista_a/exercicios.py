@@ -19,13 +19,18 @@ def conta_negativos(lista):
 
 def media(lista):
     """Media dos numeros. Lista vazia devolve 0."""
-    pass
+   def media(lista):
+  if not lista:
+    return 0
+  return sum(lista) / len(lista)
+
+  
+
 
 
 def sem_o_maior(lista):
     """Lista NOVA sem o maior valor. Se o maior repete, tira so o primeiro."""
-    pass
-
+    
 
 def acumulada(lista):
     """Lista NOVA onde cada posicao e a soma de tudo ate ali.
