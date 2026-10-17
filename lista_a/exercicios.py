@@ -19,46 +19,82 @@ def conta_negativos(lista):
 
 def media(lista):
     """Media dos numeros. Lista vazia devolve 0."""
-def media(lista):
-  if not lista:
-    return 0
-  return sum(lista) / len(lista)
+    if len(lista) == 0:
+        return 0
 
+    total = 0
+    for numero in lista:
+        total += numero
+
+    return total / len(lista)
   
 
 
 
 def sem_o_maior(lista):
     """Lista NOVA sem o maior valor. Se o maior repete, tira so o primeiro."""
-    
+    if not lista:
+        return []
+
+    maior = max(lista)
+    encontrado = False
+    nova_lista = []
+    for elemento in lista:
+        if elemento == maior and not encontrado:
+            encontrado = True
+            continue
+        nova_lista.append(elemento)
+    return nova_lista
 
 def acumulada(lista):
     """Lista NOVA onde cada posicao e a soma de tudo ate ali.
     acumulada([1, 2, 3]) -> [1, 3, 6]"""
-    pass
+    if not lista:
+        return []
+
+    nova_lista = [lista[0]]
+    for i in range(1, len(lista)):
+        nova_lista.append(nova_lista[-1] + lista[i])
+    return nova_lista
 
 
 def achata(lista_de_listas):
     """(Desafio) Junta as sublistas numa lista so.
     achata([[1, 2], [3]]) -> [1, 2, 3]"""
-    pass
+    resultado = []
+
+    for sublista in lista_de_listas:
+        for elemento in sublista:
+            resultado.append(elemento)
+
+    return resultado
 
 
 # ---------- Bloco 2: busca ----------
 
 def busca_ultima(lista, alvo):
     """ULTIMA posicao do alvo, ou -1."""
-    pass
+    for i in range(len(lista) - 1, -1, -1):
+        if lista[i] == alvo:
+            return i
+    return -1
 
 
 def conta_ocorrencias(lista, alvo):
     """Quantas vezes o alvo aparece."""
-    pass
+    contador = 0
+    for elemento in lista:
+        if elemento == alvo:
+            contador += 1
+    return contador
 
 
 def primeiro_maior_que(lista, limite):
     """Posicao do primeiro elemento maior que limite, ou -1."""
-    pass
+    for i, elemento in enumerate(lista):
+        if elemento > limite:
+            return i
+    return -1
 
 
 def busca_binaria_primeira(lista, alvo):
