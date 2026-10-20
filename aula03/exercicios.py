@@ -17,7 +17,7 @@ def soma_contando(lista):
     Conte 1 operacao para cada numero que voce somar.
     soma_contando([1, 2, 3]) -> (6, 3)"""
     soma = 0
-    operacoes = 1  
+    operacoes = 0
 
     for num in lista:
         soma += num
@@ -32,13 +32,13 @@ def busca_linear_contando(lista, alvo):
     Pare assim que encontrar."""
     comparacoes = 0
 
-        for i in range(len(lista)):
-                comparacoes += 1
+    for i in range(len(lista)):
+        comparacoes += 1
 
-                        if lista[i] == alvo:
-                                    return i, comparacoes
+        if lista[i] == alvo:
+            return i, comparacoes
 
-                                        return -1, comparacoes
+        return -1, comparacoes
 
 
 def busca_binaria_contando(lista, alvo):
@@ -46,22 +46,22 @@ def busca_binaria_contando(lista, alvo):
     Devolve (posicao, comparacoes), ou (-1, comparacoes) se nao achar.
     Conte 1 comparacao cada vez que olhar o elemento do meio."""
     inicio = 0
-        fim = len(lista) - 1
-            comparacoes = 0
+    fim = len(lista) - 1
+    comparacoes = 0
 
-                while inicio <= fim:
-                        meio = (inicio + fim) // 2
-                                comparacoes += 1
+    while inicio <= fim:
+        meio = (inicio + fim) // 2
+        comparacoes += 1
 
-                                        if lista[meio] == alvo:
-                                                    return meio, comparacoes
+        if lista[meio] == alvo:
+            return meio, comparacoes
 
-                                                            if lista[meio] < alvo:
-                                                                        inicio = meio + 1
-                                                                                else:
-                                                                                            fim = meio - 1
+        if lista[meio] < alvo:
+            inicio = meio + 1
+        else:
+            fim = meio - 1
 
-                                                                                                return -1, comparacoes
+    return -1, comparacoes
 
 
 def tem_repetido_contando(lista):
@@ -70,14 +70,14 @@ def tem_repetido_contando(lista):
     Pare assim que encontrar o primeiro repetido."""
     comparacoes = 0
 
-        for i in range(len(lista)):
-                for j in range(i + 1, len(lista)):
-                            comparacoes += 1
+    for i in range(len(lista)):
+        for j in range(i + 1, len(lista)):
+            comparacoes += 1
 
-                                        if lista[i] == lista[j]:
-                                                        return True, comparacoes
+            if lista[i] == lista[j]:
+                return True, comparacoes
 
-                                                            return False, comparacoes
+    return False, comparacoes
 
 
 def quantas_divisoes(n):
@@ -86,11 +86,11 @@ def quantas_divisoes(n):
     quantas_divisoes(8) -> 3"""
     divisoes = 0
 
-        while n > 1:
-                n = n // 2
-                        divisoes += 1
+    while n > 1:
+        n = n // 2
+        divisoes += 1
 
-                            return divisoes
+    return divisoes
 
 
 def mais_frequente_contando(lista):
@@ -98,23 +98,23 @@ def mais_frequente_contando(lista):
     O valor que mais aparece na lista. Em caso de empate, o que aparece
     primeiro. Conte 1 comparacao cada vez que comparar dois elementos."""
     if len(lista) == 0:
-                return None, 0
+        return None, 0
 
-                    mais_frequente = lista[0]
-                        maior_quantidade = 0
-                            comparacoes = 0
+    mais_frequente = lista[0]
+    maior_quantidade = 0
+    comparacoes = 0
 
-                                for i in range(len(lista)):
-                                        quantidade = 0
+    for i in range(len(lista)):
+        quantidade = 0
 
-                                                for j in range(len(lista)):
-                                                            comparacoes += 1
+        for j in range(len(lista)):
+            comparacoes += 1
 
-                                                                        if lista[i] == lista[j]:
-                                                                                        quantidade += 1
+            if lista[i] == lista[j]:
+                quantidade += 1
 
-                                                                                                if quantidade > maior_quantidade:
-                                                                                                            maior_quantidade = quantidade
-                                                                                                                        mais_frequente = lista[i]
+        if quantidade > maior_quantidade:
+            maior_quantidade = quantidade
+            mais_frequente = lista[i]
 
-                                                                                                                            return mais_frequente, comparacoes
+    return mais_frequente, comparacoes
